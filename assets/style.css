@@ -151,27 +151,27 @@ section {
     opacity: 0;
 }
 
-a.project1 {
-    background-image: url(../images/);
-}
-
-a.project2 {
-    background-image: url(../images/);
-}
-
-a.note-taker {
-    background-image: url(../images/);
-}
-
 a.password-generator {
     background-image: url(../images/);
 }
 
-a.code-quiz {
+a.Weather-forecast {
+    background-image: url(../images/Weather\ Dashboard.png);
+}
+
+a.mini-quiz {
     background-image: url(../images/);
 }
 
-a.tech-blog {
+a.Daily-Planner {
+    background-image: url(../images/);
+}
+
+a.Work-porfolio {
+    background-image: url(../images/);
+}
+
+a.project-1 {
     background-image: url(../images/);
 }
 
@@ -194,4 +194,91 @@ a.tech-blog {
 
 .work-topic p {
     font-size: 9pt;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact ul li a {
+    padding: 0 5px;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) solid 2px;
+    margin: 0 20px;
+}
+
+.contact ul li a:hover  {
+    border-bottom : none;
+    color: #000;
+}
+
+
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav ul {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .title h2 {
+        border-bottom: var(--secondary-color) solid 3px;
+        border-right: none;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 575px) {
+    header h1{
+        font-size: 1rem;
+    }
+
+    header nav ul li a {
+        margin: 10px;
+    }
+
+    .work .content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap : 5px 0;
+    }
+
+    .work .content a {
+        grid-column: 1 / span 2;
+    }
+
+    .work-topic h3 {
+        font-size: 9pt;
+    }
+    
+    .work-topic p {
+        font-size: 7pt;
+    }
+
+    .contact ul li a {
+        margin: 0 10px;
+    }
 }
